@@ -81,7 +81,7 @@ def check_password(password: str) -> tuple[bool, str]:
             check = (True, "Пароль введен корректно")
         print("Неудача")
         print(check_all)
-        check = (False, "Условие не соблюдены, смотри лог")
+        check = (False, "Условия не соблюдены, смотри лог")
     else:
         print("Неудача")
         check = (False, "Длина пароля не соответсвуют условию")
