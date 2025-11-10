@@ -47,7 +47,7 @@ special = "_!@#$%^&"
 
 def check_password(password: str) -> tuple[bool, str]:
     dig = low = up = spec = False
-    check_all =''
+    check_all = ""
 
     if 8 <= len(password) <= 15:
         for i in password:
@@ -59,17 +59,17 @@ def check_password(password: str) -> tuple[bool, str]:
                 up = True
             if i in special:
                 spec = True
-        if dig == low == up == spec ==True:
+        if dig == low == up == spec == True:
             check = (True, "Пароль введен корректно")
         else:
             if not dig:
                 check_all += "Не использовались цифры регистр\n"
             if not low:
-                check_all +=  "Не использовался нижний регистр\n"
+                check_all += "Не использовался нижний регистр\n"
             if not up:
-                check_all +=  "Не использовался верхний регистр\n"
+                check_all += "Не использовался верхний регистр\n"
             if not spec:
-                check_all +=  'Не использовался спецсимвол "_!@#$%^&"\n'
+                check_all += 'Не использовался спецсимвол "_!@#$%^&"\n'
             check = (False, check_all)
     else:
         check = (False, "Длина пароля не соответсвуют условию")
