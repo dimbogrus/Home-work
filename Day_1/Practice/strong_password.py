@@ -46,7 +46,7 @@ special = "_!@#$%^&"
 
 
 def check_password(password: str) -> tuple[bool, str]:
-    dig = low = up=  =False
+    dig = low = up = spec = False
     dig_text = "Не использовались цифры регистр"
     low_text = "Не использовался нижний регистр"
     up_text = "Не использовался верхний регистр"
